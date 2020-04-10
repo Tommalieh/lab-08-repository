@@ -137,7 +137,7 @@ function trailsRequestResponse(request, response) {
     const longitude = request.query.longitude;
     // console.log(latitude, longitude)
     superagent(
-        `https://www.hikingproject.com/data/get-trails?lat=${latitude}&lon=${longitude}&maxResults=10&key=${process.env.TRAILS_API_TOKEN}`
+        `https://www.hikingproject.com/data/get-trails?lat=${latitude}&lon=${longitude}&maxDistance=500&key=${process.env.TRAILS_API_TOKEN}`
     )
         .then(apiData => {
             // console.log(apiData.body.trails);
